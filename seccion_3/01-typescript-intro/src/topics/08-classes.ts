@@ -5,22 +5,37 @@ export class Person {
     // private address?: string;
 
     constructor( 
-        public name: string, 
+        public firstName: string, 
+        public lastName: string, 
         private address: string = 'No address'
         ) {}
 }
 
-export class Hero extends Person {
+// export class Hero extends Person {
+    
+//     constructor (
+//         public alterEgo: string,
+//         public age: number,
+//         public realName: string,
+//     ) {
+//         super( realName, 'New York');
+//     }
+// }
+
+export class Hero{
+    // public person: Person;
     
     constructor (
         public alterEgo: string,
         public age: number,
         public realName: string,
+        public person: Person,
     ) {
-        super( realName, 'New York');
+        // this.person = new Person(realName);
     }
 }
 
-const ironman = new Hero ('Ironman', 45, 'Tony')
+const tony = new Person('Tony', 'Stark', 'NY')
+const ironman = new Hero ('Ironman', 45, 'Tony', tony)
 
 console.log(ironman);
