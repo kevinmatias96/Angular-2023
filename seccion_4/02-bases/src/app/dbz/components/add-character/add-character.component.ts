@@ -18,11 +18,13 @@ export class AddCharacterComponent {
   };
 
   emitCharacter(): void {
-    console.log(this.characterr);
-    if( this.characterr.name.length === 0 ) return;
-      this.onNewCharacter.emit( this.characterr );
+    // debugger
 
-    this.characterr.name = '';
-    this.characterr.power = 0;
+    // console.log(this.characterr);
+    if( this.characterr.name.length === 0 ) return;
+
+    this.onNewCharacter.emit( this.characterr );
+
+    this.characterr =  {name: '', power: 0};
   }
 }
