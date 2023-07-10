@@ -11,7 +11,7 @@ export class CountriesService {
 
   constructor( private http: HttpClient) {  }
 
-  searchCapital( term: string ): Observable {
-    return this.http.get()
-  }
+  // searchCapital( term: string ): Observable {
+  //   return this.http.get()
+  // }
 }
